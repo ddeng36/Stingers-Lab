@@ -89,11 +89,11 @@ const Quote = () => {
     <Section ref={sectionRef}>
       <TextContainer>
         <Text delay='0'>
-          <span>&#8220;We strive for excellence, thrive on diversity.</span>
+          <span>&#8220;We celebrate collaboration, champion innovation.</span>
         </Text>
         <Text delay='0.4'>
           <span>
-            &nbsp;&nbsp;We celebrate collaboration, champion innovation.
+            &nbsp;&nbsp;We strive for excellence, thrive on diversity.
           </span>
         </Text>
         <Text delay='0.8'>
