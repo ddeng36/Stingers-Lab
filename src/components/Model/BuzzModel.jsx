@@ -15,7 +15,7 @@ const BuzzModel = () => {
   return (
     <Container id="buzz-model">
       <Canvas camera={{ fov: 10 }}>
-        <axesHelper args={[50]} />
+        {/* <axesHelper args={[50]} /> */}
         <Suspense fallback={null}>
           <Environment preset="sunset" />
           <Model />
