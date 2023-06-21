@@ -9,7 +9,7 @@ import BuzzModel from '../../components/Model/BuzzModel'
 const Home = () => {
   return (
     <div>
-        <QuoteSection />
+        {/* <QuoteSection /> */}
         <HeroSection />
         <MottoSection  />
         <DisplaySection />

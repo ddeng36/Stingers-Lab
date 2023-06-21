@@ -1,6 +1,7 @@
 import React, { useRef , useLayoutEffect} from "react";
 import styled from "styled-components";
 import gsap from "gsap";
+import ScrollTrigger from "gsap/ScrollTrigger"; 
 const Section = styled.section`
   width: 100vw;
   min-height: 200vh;
@@ -122,6 +123,7 @@ const MovingText = styled.h1`
     font-size: var(--fontmd);
   }
 `
+gsap.registerPlugin(ScrollTrigger);
 
 const DisplaySection = () => {
   const container = useRef(null);

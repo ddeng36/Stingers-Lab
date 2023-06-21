@@ -17,7 +17,7 @@ export function Model(props) {
     let t1 = gsap.timeline({
       scrollTrigger: {
         trigger: "#buzz-model",
-        start: "top+=200 top",
+        start: "top+=100 top",
         endTrigger: "#camera",
         end: "top top",
         scrub: true,
@@ -25,7 +25,8 @@ export function Model(props) {
       },
     });
   
-    t1.fromTo(camera.position, {y:190},{y:0})
+    t1
+    // .fromTo(camera.position, {y:190},{y:0})
     .to(scene.rotation, {y: 0.8,})
     .to(scene.rotation, {y: 3,})
     .to(scene.rotation, {z: 2},"key1")
@@ -33,6 +34,7 @@ export function Model(props) {
     .to(scene.rotation, {y:0,z: 0},"key2")
     .to(camera.position, {x:2,z: 6},"key2")
     .to(camera.position, {x:200,y:200},"key3")
+    
   }, []);
   return (
     <group {...props} dispose={null} position={[0, 0, -35]}>
