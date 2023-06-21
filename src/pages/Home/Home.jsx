@@ -4,6 +4,7 @@ import HeroSection from '../../components/Sections/HeroSection'
 import MottoSection from '../../components/Sections/MottoSection'
 import DisplaySection from '../../components/Sections/DisplaySection'
 import CameraSection from '../../components/Sections/CameraSection'
+import BuzzModel from '../../components/Model/BuzzModel'
 
 const Home = () => {
   return (
@@ -13,6 +14,7 @@ const Home = () => {
         <MottoSection  />
         <DisplaySection />
         <CameraSection />
+        <BuzzModel />
     </div>
   )
 }

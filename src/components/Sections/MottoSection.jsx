@@ -95,7 +95,7 @@ const MottoSection = () => {
                 end: "bottom top",
                 scrub: true,
             }
-        }).fromTo(text1.current, {x:0},{x:"40%"},"key1").fromTo(text2.current, {x:0},{x:"-30%"},"key1")
+        }).fromTo(text1.current, {x:0},{x:"35%"},"key1").fromTo(text2.current, {x:0},{x:"-25%"},"key1")
     return () => {
         if (t1) {
             t1.kill();
