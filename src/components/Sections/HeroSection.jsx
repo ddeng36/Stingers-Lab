@@ -89,8 +89,8 @@ const HeroSection = () => {
       </VideoContainer>
       <Title>Stingers Lab</Title>
       <TextContainer>
-        <span>Maker Space</span>
-        <span>@ 519</span>
+        <span>Maker</span>
+        <span>Space</span>
       </TextContainer>
     </Section>
   );

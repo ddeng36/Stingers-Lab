@@ -146,7 +146,7 @@ const DisplaySection = () => {
     };
   }, []);
   return (
-    <Section>
+    <Section >
       <MainTitle>
         蜂芒实验室 <br /> Stingers Lab
       </MainTitle>
