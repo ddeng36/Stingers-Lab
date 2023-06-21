@@ -60,8 +60,8 @@ const Text = styled.p`
     width: 60%;
     font-size: var(--fontmd);}
     @media screen and (max-width: 768px) {
-    width: 90%;
-    font-size: var(--fontsm);
+    width: 95%;
+    font-size: var(--fontxs);
     }
 `;
 const Quote = () => {
