@@ -51,7 +51,7 @@ const TitleContainer = styled.div`
   }
   & > *:nth-child(3) {
     margin-left: 19.5rem;
-    @media screen and (max-width: 40em){
+    @media screen and (max-width: 40em) {
       margin-left: 10rem;
     }
   }
@@ -67,16 +67,59 @@ const TitleContainer = styled.div`
     top: 70%;
     right: 40%;
   }
-
 `;
-const Title = styled.h1`  font-size: var(--fontBig);
-z-index: 5;
-text-transform: capitalize;
-@media screen and (max-width: 70em) {
+const Title = styled.h1`
+  font-size: var(--fontBig);
+  z-index: 5;
+  text-transform: capitalize;
+  @media screen and (max-width: 70em) {
     font-size: var(--fontxxxl);
   }
   @media screen and (max-width: 48em) {
     font-size: var(--fontxxl);
+  }
+`;
+const Explore = styled.button`
+position: absolute;
+  top: 80%;
+  left: calc(50% - 100px);
+  width: 200px;
+  height: 50px;
+  color: #fff;
+  font-size: var(--fontmd);
+  font-weight: 600;
+  border-radius: 10px;
+  border: 0px;
+  position: relative;
+  background-color: transparent;
+  & > span {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    background: linear-gradient(
+      45deg,
+      red,
+      orange,
+      yellow,
+      green,
+      blue,
+      purple,
+      red
+    );
+    filter: blur(5px);
+    background-size: 1000%;
+    animation: amSize 30s ease-in-out infinite;
+    @keyframes amSize {
+      0% {
+        background-position: 0 0;
+      }
+      100% {
+        background-position: 1000% 0;
+      }
+    }
   }
 `;
 
@@ -85,7 +128,7 @@ const CameraSection = () => {
   const videoRef1 = useRef(null);
   const videoRef2 = useRef(null);
   const titleRef = useRef(null);
-   useLayoutEffect(() => {
+  useLayoutEffect(() => {
     const Elem = sectionRef.current;
     const video1Elem = videoRef1.current;
     const video2Elem = videoRef2.current;
@@ -99,7 +142,7 @@ const CameraSection = () => {
     //     pin: true,
     //     pinSpacing: true,
     //     markers: true,
-        
+
     //   },
     // });
 
@@ -127,6 +170,10 @@ const CameraSection = () => {
         <Title>the</Title>
         <Title>Next.</Title>
       </TitleContainer>
+      <Explore>
+        <span></span>
+        EXPLORE
+      </Explore>
     </Section>
   );
 };
