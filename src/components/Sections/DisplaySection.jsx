@@ -37,7 +37,7 @@ const MainTitle = styled.h1`
   background-image: linear-gradient(-45deg, var(--gradient));
   background-clip: text;
   -webkit-background-clip: text;
-  color: transparent;
+  color: rgb(179, 163, 105);
   @media screen and (max-width: 70em) {
     font-size: var(--fontxxxl);
   }
@@ -106,7 +106,7 @@ const MovingText = styled.h1`
   background-image: linear-gradient(-45deg, var(--gradient));
   background-clip: text;
   -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
+  -webkit-text-fill-color: rgb(179, 163, 105);
   @media screen and (max-width: 70em) {
     font-size: var(--fontxxxl);
   }

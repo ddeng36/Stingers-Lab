@@ -35,7 +35,7 @@ const TextContainer = styled.div`
   background-image: linear-gradient(-45deg, var(--gradient));
   background-clip: text;
   -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
+  -webkit-text-fill-color: black;
   span {
     font-size: var(--fontxxxl);
     text-transform: uppercase;
@@ -87,7 +87,7 @@ const HeroSection = () => {
       <VideoContainer>
         <video src={heroVideo} type="video/mp4" autoPlay muted loop />
       </VideoContainer>
-      <Title>Stingers Lab</Title>
+      {/* <Title>Stingers Lab</Title> */}
       <TextContainer>
         <span>Maker</span>
         <span>Space</span>
