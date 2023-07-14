@@ -9,26 +9,13 @@ const Section = styled.section`
   background-color: var(--dark);
   overflow: hidden;
 `;
-const Title = styled.h1`
-  position: absolute;
-  top: 2rem;
-  left: 2rem;
 
-  font-size: var(--fontlg);
-  font-family: var(--fontL);
-  color: var(--greyLight);
-  @media screen and (max-width: 48em) {
-    bottom: 2rem;
-    top: auto;
-
-  }
-
-`;
 
 const TextContainer = styled.div`
   z-index: 1;
   width: 100%;
   height: 100vh;
+  letter-spacing: 30px;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -87,7 +74,6 @@ const HeroSection = () => {
       <VideoContainer>
         <video src={heroVideo} type="video/mp4" autoPlay muted loop />
       </VideoContainer>
-      {/* <Title>Stingers Lab</Title> */}
       <TextContainer>
         <span>Maker</span>
         <span>Space</span>

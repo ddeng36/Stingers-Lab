@@ -11,22 +11,22 @@ h1,h2,h3,h4,h5,h6{
 }
 
 @font-face {
-    font-family: 'Source Sans Pro light';
-    src: local('Source Sans Pro light'), url('assets/fonts/SourceSansPro-Light.ttf') format("truetype") ;
+    font-family: 'Futura Book font';
+    src: local('Futura Book font'), url('assets/fonts/Futura Book font.ttf') format("truetype") ;
     font-display:swap;
     font-style: normal;
 }
 
 @font-face {
-    font-family: 'Source Sans Pro';
-    src: local('Source Sans Pro'), url('assets/fonts/SourceSansPro-Regular.ttf') format("truetype") ;
+    font-family: 'Futura Light font';
+    src: local('Futura Light font'), url('assets/fonts/Futura Light font.ttf') format("truetype") ;
     font-display:swap;
     font-style: normal;
 }
 
 body{
     margin: 0;
-    font-family: "Source Sans Pro", sans-serif;
+    font-family: 'Futura Book font',"Futura Light font", sans-serif;
     overflow-x: hidden;
 }
 
@@ -53,8 +53,8 @@ body{
   --blueRgba:"0, 113, 227";
 
   //fonts
-  --fontL: "Source Sans Pro light";
-  --fontR: "Source Sans Pro";
+  --fontL: "Futura Light font";
+  --fontR: "Futura Book font";
   
   // gradient
   --gradient: #35c3f3 0%, #8b9fe8 20%, #e681d8 39%, #ffa9a4 76%, #fed2ce 100%;

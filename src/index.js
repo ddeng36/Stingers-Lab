@@ -3,7 +3,16 @@ import ReactDOM from 'react-dom/client';
 import './index.scss';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
+import { config as AmapReactConfig } from '@amap/amap-react';
 
+AmapReactConfig.version = '2.0'; // 默认2.0，这里可以不修改
+AmapReactConfig.key = 'f39bd6867c1ff74d245282ac5beab9a5';
+AmapReactConfig.plugins = [
+  'AMap.ToolBar',
+  'AMap.MoveAnimation',
+  //english
+  
+];
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>

@@ -34,6 +34,7 @@ const Section = styled.section`
 const MainTitle = styled.h1`
   font-size: var(--fontBig);
   font-family: var(--fontL);
+  letter-spacing: 2px;
   background-image: linear-gradient(-45deg, var(--gradient));
   background-clip: text;
   -webkit-background-clip: text;

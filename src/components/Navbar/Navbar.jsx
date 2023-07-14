@@ -9,13 +9,13 @@ const NavbarContainer = styled.div`
   position: fixed;
   z-index: 100;
   width: calc(100vw - 100px);
-  height: ${props => (props.visible === 'true'? "80px" : "200px")};
+  height: 80px;
   padding: 0 50px;
   text-transform: uppercase;
   letter-spacing: 2px;
-  background: black;
+  background: ${props => (window.scrollY >= 10 || props.alwayson === 'true'? "rgba(0, 0, 0, 0.8)" : "transparent")};
   transition: transform 0.3s ease;
-  transform: translateY(${props => (props.visible === 'true'? "0" : "-100%")});
+  transform: translateY(${props => (props.visible === 'true' ? "0" : "-100%")});
 `;
 
 const TitleContainer = styled.div`
@@ -40,6 +40,7 @@ const ListContainer = styled.ul`
 `;
 
 const Item = styled.li`
+  color: ${props => (props.className === "active" ? "rgb(179, 163, 105)" : "white")};
   &:hover {
     color: rgb(179, 163, 105);
     transition: all 0.3s ease-in-out;
@@ -54,7 +55,7 @@ const linkStyle = {
 };
 
 const Navbar = (props) => {
-  const [navbarVisible, setNavbarVisible] = useState(false);
+  const [navbarVisible, setNavbarVisible] = useState(true);
 
   useEffect(() => {
     if(props.alwayson){
@@ -65,9 +66,8 @@ const Navbar = (props) => {
     const handleScroll = () => {
       const scrollPosition = window.scrollY;
       const screenHeight = window.innerHeight;
-      const scrollThreshold = screenHeight * 1; // 设置滚动阈值
-
-      setNavbarVisible(scrollPosition > scrollThreshold);
+      const scrollThreshold = screenHeight * 1; 
+      setNavbarVisible( scrollPosition > scrollThreshold || scrollPosition == 0);
     };
 
     window.addEventListener("scroll", handleScroll);
@@ -79,19 +79,19 @@ const Navbar = (props) => {
 
   return (
     <div>
-      <NavbarContainer visible={navbarVisible.toString()} >
+      <NavbarContainer visible={navbarVisible.toString()} alwayson={props.alwayson.toString()}>
         <Link to="/" style={{ textDecoration: 'none', color: 'white' }}>
           <TitleContainer>
-            <Title>THE MAKERSPACE</Title>
+            <Title>StingersLab</Title>
             <Title>@ GEORGIA TECH-SHENZHEN</Title>
           </TitleContainer>
         </Link>
         <ListContainer>
-          <Link to="/" style={linkStyle}><Item>Home</Item></Link>
-          <Link to="/about" style={linkStyle}><Item>About</Item></Link>
-          <Link to="/getting-start" style={linkStyle}><Item>Getting Start</Item></Link>
-          <Link to="/tools" style={linkStyle}><Item>Tools & Resources</Item></Link>
-          <Link to="/projects" style={linkStyle}><Item>Projects Portfolio</Item></Link>
+          <Link to="/" style={linkStyle}><Item className={props.active === "Home"?  "active" :""}>Home</Item></Link>
+          <Link to="/about" style={linkStyle}><Item className={props.active === "About"?  "active" :""}>About</Item></Link>
+          <Link to="/getting-start" style={linkStyle}><Item className={props.active === "Start"?  "active" :""}>Getting Start</Item></Link>
+          <Link to="/tools" style={linkStyle}><Item className={props.active === "Tools"?  "active" :""}>Tools & Resources</Item></Link>
+          <Link to="/projects" style={linkStyle}><Item className={props.active === "Projects"?  "active" :""}>Projects Portfolio</Item></Link>
         </ListContainer>
       </NavbarContainer>
     </div>

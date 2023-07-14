@@ -5,15 +5,17 @@ import DisplaySection from '../../components/Sections/DisplaySection'
 import CameraSection from '../../components/Sections/CameraSection'
 import BuzzModel from '../../components/Model/BuzzModel'
 import Navbar from '../../components/Navbar/Navbar'
+import Footer from '../../components/Footer/Footer'
 const Home = () => {
   return (
     <div>
-        <Navbar alwayson={true}/>
+        <Navbar alwayson={true} active="Home"/>
         <HeroSection />
         <MottoSection  />
         <DisplaySection />
         <CameraSection />
         <BuzzModel />
+        <Footer />
     </div>
   )
 }
