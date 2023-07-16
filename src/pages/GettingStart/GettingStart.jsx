@@ -37,12 +37,19 @@ const PolicyContainer = styled.div`
   width: 80%;
   display: flex;
   flex-direction: row;
+  @media screen and (max-width: 888px) {
+    flex-direction: column;
+  }
   justify-content: space-between;
   align-items: center;
   margin-bottom: 50px;
 `;
 const PolicyTitle = styled.h3`
-  width: 35%;
+text-align: center;
+  width: 35%;  
+  @media screen and (max-width: 888px) {
+    width: 100%;
+  }
   font-size: var(--fontlg);
   letter-spacing: 5px;
 `;
@@ -173,7 +180,7 @@ const GettingStart = () => {
         </PolicyContainer>
 
         <PolicyContainer>
-          <PolicyTitle>RESPECT THE EQUIPMENT</PolicyTitle>
+          <PolicyTitle>RESPECT EQUIPMENTS</PolicyTitle>
           <PolicyContentContainer>
             <PolicyContent>
               Refrain from borrowing tools from the space.

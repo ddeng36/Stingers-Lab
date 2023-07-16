@@ -3,6 +3,7 @@ import styled from "styled-components";
 import v1 from "../../assets/videos/v1.mp4";
 import v2 from "../../assets/videos/v2.mp4";
 import gsap from "gsap";
+import { Link } from "react-router-dom";
 
 const Section = styled.section`
   width: 100vw;
@@ -64,7 +65,7 @@ const TitleContainer = styled.div`
     right: 5rem;
   }
   @media screen and (max-width: 30em) {
-    top: 70%;
+    top: 0;
     right: 40%;
   }
 `;
@@ -92,6 +93,7 @@ position: absolute;
   border: 0px;
   position: relative;
   background-color: transparent;
+  
   & > span {
     position: absolute;
     top: 0;
@@ -120,6 +122,7 @@ position: absolute;
         background-position: 1000% 0;
       }
     }
+
   }
 `;
 
@@ -166,13 +169,15 @@ const CameraSection = () => {
       <V1 ref={videoRef1} src={v1} type="video/mp4" autoPlay muted loop />
       <V2 ref={videoRef2} src={v2} type="video/mp4" autoPlay muted loop />
       <TitleContainer ref={titleRef}>
-        <Title>Engineer</Title>
+        <Title>Creating</Title>
         <Title>the</Title>
         <Title>Next.</Title>
       </TitleContainer>
       <Explore>
         <span></span>
+        <Link to={"/getting-start"} style={{ textDecoration: 'none', color: 'white' }}>
         EXPLORE
+        </Link>
       </Explore>
     </Section>
   );

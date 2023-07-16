@@ -54,6 +54,7 @@ const MainTitle = styled.h1`
 `;
 
 const TextBlockRight = styled.div`
+z-index: 10;
   display: flex;
   flex-direction: column;
   align-items: flex-end;
@@ -78,10 +79,11 @@ const Text = styled.div`
   }
   @media screen and (max-width: 48em) {
     width: 100%;
-    font-size: var(--fontxxs);
+    font-size: var(--fontsm);
   }
 `;
 const TextBlockLeft = styled.div`
+z-index: 10;
   display: flex;
   flex-direction: column;
   align-items: flex-start;
@@ -119,9 +121,6 @@ const MovingText = styled.h1`
   }
   @media screen and (max-width: 40em) {
     font-size: var(--fontlg);
-  }
-  @media screen and (max-width: 30em) {
-    font-size: var(--fontmd);
   }
 `
 gsap.registerPlugin(ScrollTrigger);

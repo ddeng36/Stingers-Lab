@@ -37,7 +37,10 @@ const ContactContent = styled.p`
 const MapContainer = styled.div`
   width: 500px;
   height: 500px;
-  margin-bottom: 50px;
+  @media screen and (max-width: 500px) {
+  height: 300px;
+  }
+    margin-bottom: 50px;
 `;
 const TeamContainer = styled.div`
   display: flex;
@@ -62,6 +65,7 @@ const StudentContainer = styled.div`
 `;
 const PersonTitle = styled.h1`
   font-size: var(--fontlg);
+  color: rgb(179, 163, 105);
 `;
 const PersonContent = styled.div`
   display: flex;
@@ -140,7 +144,7 @@ const About = () => {
             <PersonContent>
               <PersonImg src={images.kk} />
               <PersonName>Zhikang Wang</PersonName>
-              <PersonEmail>zk@gatech.edu</PersonEmail>
+              <PersonEmail>zwang3396@gatech.edu</PersonEmail>
             </PersonContent>
             </PersonContainer>
             <PersonContainer>

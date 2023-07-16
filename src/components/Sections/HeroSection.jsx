@@ -19,10 +19,7 @@ const TextContainer = styled.div`
   display: flex;
   justify-content: space-between;
   align-items: center;
-  background-image: linear-gradient(-45deg, var(--gradient));
-  background-clip: text;
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: black;
+  
   span {
     font-size: var(--fontxxxl);
     text-transform: uppercase;
@@ -40,14 +37,10 @@ const TextContainer = styled.div`
 
   @media screen and (max-width: 48em) {
     flex-direction: column;
-    background-image: linear-gradient(90deg, var(--gradient));
-    align-items: flex-start;
+    justify-content: space-around;
     filter: brightness(1.1);
 
-    & > *:last-child {
-      align-self: flex-end;
-    }
-
+    margin-top: 100px;
     height: 80vh;
     padding: 0 1rem;
   }

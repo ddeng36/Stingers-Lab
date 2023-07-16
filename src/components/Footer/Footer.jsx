@@ -13,9 +13,7 @@ const FooterContainer = styled.div`
 const Footer = () => {
   return (
     <div>
-      <FooterContainer>
-        © StingersLab Georgia Tech Shenzhen, 2023
-      </FooterContainer>
+      <FooterContainer>©2023 Georgia Institute of Technology</FooterContainer>
     </div>
   );
 };

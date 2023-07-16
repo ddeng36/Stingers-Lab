@@ -1,22 +1,25 @@
-import React  from "react";
+import React from "react";
 import styled from "styled-components";
 const StyledInfoContainer = styled.div`
-    position: relative;
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    align-items: center;
-    width: 100vw;
-    height: 400px;
+  position: relative;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  width: 100vw;
+  height: 400px;
   margin-bottom: 100px;
-    background-image: url(${props => props.img});
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
-    background-attachment: fixed;
-    overflow: hidden;
+  background-image: url(${(props) => props.img});
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+  @media screen and (max-width: 700px) {
 
-    &::before {
+  background-attachment: scroll;
+  }
+  overflow: hidden;
+
+  &::before {
     content: "";
     position: absolute;
     top: 0;
@@ -28,21 +31,27 @@ const StyledInfoContainer = styled.div`
   }
 `;
 const InfoContainer = styled.div`
-    width: 100%;
-    text-align: center;
-    z-index: 1;
-`
+  width: 100%;
+  text-align: center;
+  z-index: 1;
+`;
 const InfoTitle = styled.h1`
-    color: white;
-    font-size: var(--fontxxxl);
-    letter-spacing: 5px;
-    margin-bottom: 20px;
-`
+  color: white;
+  font-size: var(--fontxxxl);
+  @media screen and (max-width: 700px) {
+    font-size: var(--fontxxl);
+  }
+  letter-spacing: 5px;
+  margin-bottom: 20px;
+`;
 const InfoContent = styled.p`
-    color: rgb(179, 163, 105);
-    font-size: var(--fontlg);
-    letter-spacing: 2px;
-`
+  color: rgb(179, 163, 105);
+  font-size: var(--fontlg);
+  @media screen and (max-width: 700px) {
+    font-size: var(--fontmd);
+  }
+  letter-spacing: 2px;
+`;
 
 const StyledInfo = (props) => {
   return (
