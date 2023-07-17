@@ -31,7 +31,7 @@ const Container = styled.div`
     top: var(--y, -100px);
     background: radial-gradient(
       closest-side circle,
-      grey 10%,
+      rgb(179, 163, 105) 50%,
       transparent
     );
     transform: translate(-50%, -50%);
@@ -52,9 +52,10 @@ const ImageContainer = styled.div`
     width: 100%;
     object-fit: cover;
     border-radius: inherit;
+
   }
   .mainImg {
-    transition: opacity 0.5s ease;
+    transition: opacity 1s ease;
     &.fade {
       opacity: 0;
     }
@@ -62,7 +63,7 @@ const ImageContainer = styled.div`
   .secondImg {
     z-index: 0;
     opacity: 0;
-    transition: opacity 0.5s ease;
+    transition: opacity 1s ease;
     &.active {
       opacity: 1;
     }
@@ -70,7 +71,12 @@ const ImageContainer = styled.div`
 `;
 const Image1 = styled.img``;
 const Image2 = styled.img``;
-const Title = styled.h1``;
+const Title = styled.h1`
+  font-size: var(--fontlg);
+  @media screen and (max-width: 768px) {
+    font-size: var(--fontmd);
+  }
+`;
 const Tool = (props) => {
     console.log(props)
   const [hover, setHover] = useState(false);
@@ -83,7 +89,7 @@ const Tool = (props) => {
       style={{
         transform: hover ? "scale(1.1)" : "scale(1)",
         transition: "all 0.5s ease-in-out",
-        color: "grey",
+        color: "black",
         textDecoration: "none",
       }}
     >

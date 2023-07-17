@@ -6,7 +6,7 @@ const FooterContainer = styled.div`
   justify-content: center;
   width: 100vw;
   height: 100px;
-  margin-top: 30px;
+  margin-top: 100px;
   background-color: black;
   color: white;
   font-size: var(--fontsm);

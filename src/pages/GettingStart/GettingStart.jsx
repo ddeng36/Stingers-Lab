@@ -39,6 +39,8 @@ const PolicyContainer = styled.div`
   flex-direction: row;
   @media screen and (max-width: 888px) {
     flex-direction: column;
+    justify-content: center;
+    align-items: center;
   }
   justify-content: space-between;
   align-items: center;

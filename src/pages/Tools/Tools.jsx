@@ -17,7 +17,7 @@ const CardContainer = styled.div`
   flex-direction: row;
   justify-content: space-evenly;
   align-items: center;
-  gap: 2rem;
+  gap: 50px;
   flex-wrap: wrap;
   padding: 0 15vw;
 `;
@@ -29,14 +29,20 @@ const Tools = () => {
     const container = document.querySelector(".container");
     const cards = document.querySelectorAll(".card");
     const handleMouseMove = (e) => {
-      const { left, top } = container.getBoundingClientRect();
       cards.forEach((card) => {
-        const cardX = card.getBoundingClientRect().left - left;
-        const cardY = card.getBoundingClientRect().top - top;
-        card.style.setProperty("--x", `${e.clientX - cardX}px`);
-        card.style.setProperty("--y", `${e.clientY - cardY}px`);
+        const rect = card.getBoundingClientRect();
+        const cardX = e.clientX - rect.left;
+        const cardY = e.clientY - rect.top;
+        card.style.setProperty("--x", `${cardX}px`);
+        card.style.setProperty("--y", `${cardY}px`);
       });
-    }
+    };
+  
+    document.addEventListener("mousemove", handleMouseMove);
+  
+    return () => {
+      document.removeEventListener("mousemove", handleMouseMove);
+    };
     container.addEventListener("mousemove", handleMouseMove);
     return () => {
       container.removeEventListener("mousemove", handleMouseMove);
