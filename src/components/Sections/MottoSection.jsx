@@ -112,7 +112,7 @@ const MottoSection = () => {
       </TextContainer>
 
       <TextContainer2 ref={text2}>
-        <span>Seeking Truth from Facts.</span>
+        <span>Creating the Next.</span>
       </TextContainer2>
     </Section>
   );

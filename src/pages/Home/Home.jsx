@@ -29,7 +29,7 @@ const SliderContainer = styled.div`
 const Slider = styled.div`
   width: 20px;
   height: 50px;
-  border: 2px solid white;
+  border: 2px solid rgb(179, 163, 105);
   border-radius: 20px;
   position: relative;
   &::before {
@@ -40,7 +40,7 @@ const Slider = styled.div`
     width: 16px;
     height: 16px;
     border-radius: 50%;
-    background-color: white;
+    background-color: rgb(179, 163, 105);
     animation: animate 1s infinite ease-in-out alternate;
     @keyframes animate {
       to {
@@ -51,7 +51,11 @@ const Slider = styled.div`
 `;
 const Tip = styled.p`
   text-align: center;
-  color: white;
+  color: rgb(179, 163, 105);
+  font-size: var(--fontmd);
+  @media screen and (max-width: 500px) {
+    font-size: var(--fontxs);
+    }
 `;
 const Home = () => {
   const [sliderVisible, setSliderVisible] = useState(true);
@@ -76,7 +80,7 @@ const Home = () => {
           <Navbar alwayson={true} active="Home" />
           <SliderContainer visible={sliderVisible.toString()}>
             <Slider />
-            <Tip>Slide to see more</Tip>
+            <Tip>Scroll to see more</Tip>
           </SliderContainer>
           <HeroSection />
           <MottoSection />

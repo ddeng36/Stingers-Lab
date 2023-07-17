@@ -175,7 +175,9 @@ const CameraSection = () => {
       </TitleContainer>
       <Explore>
         <span></span>
-        <Link to={"/getting-start"} style={{ textDecoration: 'none', color: 'white' }}>
+        <Link to={"/getting-start"} style={{ textDecoration: 'none', color: 'white' }} onClick={() => {
+              window.scrollTo(0, 0);
+            }}>
         EXPLORE
         </Link>
       </Explore>
