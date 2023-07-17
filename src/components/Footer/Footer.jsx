@@ -6,6 +6,7 @@ const FooterContainer = styled.div`
   justify-content: center;
   width: 100vw;
   height: 100px;
+  margin-top: 30px;
   background-color: black;
   color: white;
   font-size: var(--fontsm);
@@ -13,7 +14,7 @@ const FooterContainer = styled.div`
 const Footer = () => {
   return (
     <div>
-      <FooterContainer>©2023 Georgia Institute of Technology</FooterContainer>
+      <FooterContainer>©Georgia Tech-Shenzhen StingersLab, 2023  </FooterContainer>
     </div>
   );
 };

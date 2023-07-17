@@ -7,7 +7,7 @@ const StyledInfoContainer = styled.div`
   justify-content: center;
   align-items: center;
   width: 100vw;
-  height: 400px;
+  height: 60vh;
   margin-bottom: 100px;
   background-image: url(${(props) => props.img});
   background-size: cover;

@@ -2,7 +2,7 @@ import React, { useState, useEffect } from "react";
 import styled from "styled-components";
 import { Link } from "react-router-dom";
 import MenuIcon from "@mui/icons-material/Menu";
-import CloseIcon from '@mui/icons-material/Close';
+import CloseIcon from "@mui/icons-material/Close";
 const NavbarContainer = styled.div`
   display: flex;
   justify-content: space-between;
@@ -15,7 +15,9 @@ const NavbarContainer = styled.div`
   text-transform: uppercase;
   letter-spacing: 2px;
   background: ${(props) =>
-    window.scrollY >= 10 || props.alwayson === "true" || props.listvisible == "true"
+    window.scrollY >= 10 ||
+    props.alwayson === "true" ||
+    props.listvisible === "true"
       ? "rgba(0, 0, 0, 0.8)"
       : "transparent"};
   transition: all 0.5s ease-in-out;
@@ -49,7 +51,6 @@ const MenuContainer = styled.div`
   @media screen and (max-width: 1300px) {
     display: block;
   }
-  
 `;
 const ListContainer = styled.ul`
   @media screen and (max-width: 1300px) {
@@ -59,7 +60,7 @@ const ListContainer = styled.ul`
     transform: ${(props) =>
       props.visible === "true" ? "translateX(0)" : "translateX(100%)"};
     transition: transform 0.5s ease-in-out;
-     
+
     flex-direction: column;
     align-items: center;
     background: rgba(0, 0, 0, 0.8);
@@ -124,31 +125,62 @@ const Navbar = (props) => {
         alwayson={props.alwayson.toString()}
         listvisible={listVisible.toString()}
       >
-        <Link to="/" style={{ textDecoration: "none", color: "white" }}>
+        {/* when click, set positionY to 0 */}
+        <Link
+          to="/"
+          style={{ textDecoration: "none", color: "white" }}
+          onClick={() => {
+            window.scrollTo(0, 0);
+          }}
+        >
           <TitleContainer>
             <Title>StingersLab</Title>
             <Title>@ GEORGIA TECH - SHENZHEN</Title>
           </TitleContainer>
         </Link>
-        <ListContainer visible={listVisible.toString()} >
-          <Link to="/" style={linkStyle}>
+        <ListContainer visible={listVisible.toString()}>
+          <Link
+            to="/"
+            style={linkStyle}
+            onClick={() => {
+              window.scrollTo(0, 0);
+            }}
+          >
             <Item className={props.active === "Home" ? "active" : ""}>
               Home
             </Item>
           </Link>
-          <Link to="/about" style={linkStyle} >
+          <Link
+            to="/about"
+            style={linkStyle}
+            onClick={() => {
+              window.scrollTo(0, 0);
+            }}
+          >
             <Item className={props.active === "About" ? "active" : ""}>
               About
             </Item>
           </Link>
-          <Link to="/getting-start" style={linkStyle}>
+          <Link
+            to="/getting-start"
+            style={linkStyle}
+            onClick={() => {
+              window.scrollTo(0, 0);
+            }}
+          >
             <Item className={props.active === "Start" ? "active" : ""}>
               Getting Started
             </Item>
           </Link>
-          <Link to="/tools" style={linkStyle}>
+          <Link
+            to="/tools"
+            style={linkStyle}
+            onClick={() => {
+              window.scrollTo(0, 0);
+            }}
+          >
             <Item className={props.active === "Tools" ? "active" : ""}>
-              Tools & Resources
+              Tools
             </Item>
           </Link>
           <Link to="/projects" style={linkStyle}>
@@ -157,9 +189,15 @@ const Navbar = (props) => {
             </Item>
           </Link>
         </ListContainer>
-        <MenuContainer >
-          <MenuIcon onClick={() => setListVisible(true)} style={{display: listVisible ? "none" : "block"}}/>
-          <CloseIcon onClick={() => setListVisible(false)} style={{display: listVisible ? "block" : "none"}}/>
+        <MenuContainer>
+          <MenuIcon
+            onClick={() => setListVisible(true)}
+            style={{ display: listVisible ? "none" : "block" }}
+          />
+          <CloseIcon
+            onClick={() => setListVisible(false)}
+            style={{ display: listVisible ? "block" : "none" }}
+          />
         </MenuContainer>
       </NavbarContainer>
     </div>

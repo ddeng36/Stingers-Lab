@@ -157,7 +157,7 @@ const GettingStart = () => {
               demonstrates consideration for others and enhances safety.
             </PolicyContent>
             <PolicyContent>
-              Enter the space only when a superuser or the lab manager is
+              Enter the space only when a student assistant or the lab manager is
               present. Please adhere to the specified opening and closing times
               as indicated on the calendar.
             </PolicyContent>
@@ -171,7 +171,7 @@ const GettingStart = () => {
           <PolicyTitle>RESPECT YOUR COLLEAGUES</PolicyTitle>
           <PolicyContentContainer>
             <PolicyContent>
-              Show consideration for other users and superusers in the space.
+              Show consideration for other users and student assistants in the space.
             </PolicyContent>
             <PolicyContent>
               Share the available tools and resources cooperatively.
