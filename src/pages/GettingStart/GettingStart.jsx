@@ -2,7 +2,6 @@ import React from "react";
 import styled from "styled-components";
 import Navbar from "../../components/Navbar/Navbar";
 import StyledInfo from "../../components/StyledInfo/StyledInfo";
-import images from "../../constant/images";
 import Footer from "../../components/Footer/Footer";
 const GettingStartContainer = styled.div`
   width: 100vw;
@@ -41,6 +40,7 @@ const PolicyContainer = styled.div`
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    
   }
   justify-content: space-between;
   align-items: center;
@@ -80,8 +80,8 @@ const GettingStart = () => {
       <Navbar alwayson={false} active="Start"/>
       <GettingStartContainer>
         <StyledInfo
-          bg={images.getting_started}
-          title="Getting Started"
+          bg='https://stingerslab.s3.cn-north-1.amazonaws.com.cn/images/getting_started.jpg'
+          title="Start Making"
           content="BEGIN HERE"
         />
         <FAQContainer>
@@ -124,11 +124,11 @@ const GettingStart = () => {
               want to come outside of these hours, you can request access by
               sending a message to the StingersLab Wechat Group.
             </Answer>
-            <Img src={images.wechat} alt="wechat" />
+            <Img src='https://stingerslab.s3.cn-north-1.amazonaws.com.cn/images/wechat.jpg' alt="wechat" />
           </FAQ>
         </FAQContainer>
         <StyledInfo
-          bg={images.policy}
+          bg='https://stingerslab.s3.cn-north-1.amazonaws.com.cn/images/policy.jpg'
           title="Policies"
           content="Know and follow these rules:"
         />

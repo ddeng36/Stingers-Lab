@@ -1,7 +1,6 @@
 import React from "react";
 import styled from "styled-components";
 import StyledInfo from "../../components/StyledInfo/StyledInfo";
-import images from "../../constant/images";
 import Footer from "../../components/Footer/Footer";
 import Navbar from "../../components/Navbar/Navbar";
 import ProjectAlex from "../../components/Project/ProjectAlex";
@@ -20,7 +19,7 @@ const Projects = () => {
 <Navbar alwayson={false} active="Projects" />
       <ProjectsContainer>
         <StyledInfo
-          bg={images.projects}
+          bg='https://stingerslab.s3.cn-north-1.amazonaws.com.cn/images/projects.jpg'
           title="Projects"
           content="PROJECTS BY MAKERSPACE USERS"
         />

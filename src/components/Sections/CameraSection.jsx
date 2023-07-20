@@ -1,9 +1,8 @@
-import React, { useRef, useLayoutEffect } from "react";
+import React, { useRef, useLayoutEffect, useState } from "react";
 import styled from "styled-components";
-import v1 from "../../assets/videos/v1.mp4";
-import v2 from "../../assets/videos/v2.mp4";
 import gsap from "gsap";
 import { Link } from "react-router-dom";
+
 
 const Section = styled.section`
   width: 100vw;
@@ -81,7 +80,7 @@ const Title = styled.h1`
   }
 `;
 const Explore = styled.button`
-position: absolute;
+  position: absolute;
   top: 80%;
   left: calc(50% - 100px);
   width: 200px;
@@ -93,7 +92,7 @@ position: absolute;
   border: 0px;
   position: relative;
   background-color: transparent;
-  
+
   & > span {
     position: absolute;
     top: 0;
@@ -122,7 +121,6 @@ position: absolute;
         background-position: 1000% 0;
       }
     }
-
   }
 `;
 
@@ -131,6 +129,26 @@ const CameraSection = () => {
   const videoRef1 = useRef(null);
   const videoRef2 = useRef(null);
   const titleRef = useRef(null);
+  // if it is not Andriod, render the video
+  const isAndriod = navigator.userAgent.indexOf('Android') > -1 || navigator.userAgent.indexOf('Adr') > -1;
+
+  // make it play automatically in wechat browser for ios
+  document.addEventListener(
+    "WeixinJSBridgeReady",
+    function () {
+      document.getElementById("v1").play();
+    },
+    false
+  );
+  document.addEventListener(
+    "WeixinJSBridgeReady",
+    function () {
+      document.getElementById("v2").play();
+    },
+    false
+  );
+
+
   useLayoutEffect(() => {
     const Elem = sectionRef.current;
     const video1Elem = videoRef1.current;
@@ -164,10 +182,39 @@ const CameraSection = () => {
       if (t2) t2.kill();
     };
   }, []);
+
   return (
     <Section ref={sectionRef} id="camera">
-      <V1 ref={videoRef1} src={v1} type="video/mp4" autoPlay muted loop />
-      <V2 ref={videoRef2} src={v2} type="video/mp4" autoPlay muted loop />
+      {!isAndriod && (
+        <>
+          <V1
+            ref={videoRef1}
+            id="v1"
+            src="/v1.mp4"
+            type="video/mp4"
+            autoPlay
+            muted
+            loop
+            playsInline={true}
+            webkit-playsinline="true"
+            x5-video-player-type="h5"
+            x5-video-player-fullscreen="true"
+          />
+          <V2
+            ref={videoRef2}
+            id="v2"
+            src="/v2.mp4"
+            type="video/mp4"
+            autoPlay
+            muted
+            loop
+            playsInline={true}
+            webkit-playsinline="true"
+            x5-video-player-type="h5"
+            x5-video-player-fullscreen="true"
+          />
+        </>
+      )}
       <TitleContainer ref={titleRef}>
         <Title>Creating</Title>
         <Title>the</Title>
@@ -175,10 +222,14 @@ const CameraSection = () => {
       </TitleContainer>
       <Explore>
         <span></span>
-        <Link to={"/getting-start"} style={{ textDecoration: 'none', color: 'white' }} onClick={() => {
-              window.scrollTo(0, 0);
-            }}>
-        EXPLORE
+        <Link
+          to={"/getting-start"}
+          style={{ textDecoration: "none", color: "white" }}
+          onClick={() => {
+            window.scrollTo(0, 0);
+          }}
+        >
+          EXPLORE
         </Link>
       </Explore>
     </Section>

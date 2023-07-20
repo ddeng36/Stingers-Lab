@@ -151,17 +151,6 @@ const Navbar = (props) => {
             </Item>
           </Link>
           <Link
-            to="/about"
-            style={linkStyle}
-            onClick={() => {
-              window.scrollTo(0, 0);
-            }}
-          >
-            <Item className={props.active === "About" ? "active" : ""}>
-              About
-            </Item>
-          </Link>
-          <Link
             to="/getting-start"
             style={linkStyle}
             onClick={() => {
@@ -169,7 +158,7 @@ const Navbar = (props) => {
             }}
           >
             <Item className={props.active === "Start" ? "active" : ""}>
-              Getting Started
+              Start Making
             </Item>
           </Link>
           <Link
@@ -185,7 +174,18 @@ const Navbar = (props) => {
           </Link>
           <Link to="/projects" style={linkStyle}>
             <Item className={props.active === "Projects" ? "active" : ""}>
-              Projects Portfolio
+              Projects
+            </Item>
+          </Link>
+          <Link
+            to="/about"
+            style={linkStyle}
+            onClick={() => {
+              window.scrollTo(0, 0);
+            }}
+          >
+            <Item className={props.active === "About" ? "active" : ""}>
+              About
             </Item>
           </Link>
         </ListContainer>

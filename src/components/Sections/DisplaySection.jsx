@@ -140,8 +140,8 @@ const DisplaySection = () => {
           scrub: 1,
         },
       })
-      .fromTo(textOne.current, { x: 0 }, { x: "-20%" }, "key1")
-      .fromTo(textTwo.current, { x: 0 }, { x: "20%" }, "key1");
+      .fromTo(textOne.current, { x: 0 }, { x: "-40%" }, "key1")
+      .fromTo(textTwo.current, { x: 0 }, { x: "40%" }, "key1");
 
     return () => {
       if (t1) t1.kill();
@@ -153,13 +153,13 @@ const DisplaySection = () => {
         蜂芒实验室 <br /> Stingers Lab
       </MainTitle>
       <TextBlockRight>
-        <Title>A hub for realizing ideas.</Title>
+        <Title>Space for realizing ideas.</Title>
         <Text>
-        The lab is fully equipped with a variety of tools and materials so you can turn your ideas into reality in the lab。
+        The lab is fully equipped with a variety of tools and materials so you can turn your ideas into reality in the lab.
         </Text>
       </TextBlockRight>
       <TextBlockLeft ref={container}>
-        <Title>A station for making things.</Title>
+        <Title>Hub for making things.</Title>
         <Text>
          Currently, there are various projects going on in the lab, covering technical domains, including 3D modelling & printing, mechanical & industrial design, loT, Al, and app development.
         </Text>

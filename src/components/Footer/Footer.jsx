@@ -1,6 +1,9 @@
 import React from "react";
 import styled from "styled-components";
+
 const FooterContainer = styled.div`
+  z-index: 1;
+  position: relative;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -8,13 +11,20 @@ const FooterContainer = styled.div`
   height: 100px;
   margin-top: 100px;
   background-color: black;
-  color: white;
   font-size: var(--fontsm);
+  a {
+    color: white;
+    text-decoration: none;
+  }
 `;
 const Footer = () => {
   return (
     <div>
-      <FooterContainer>©Georgia Tech-Shenzhen StingersLab, 2023  </FooterContainer>
+      <FooterContainer>
+        <a href="https://beian.miit.gov.cn/#/Integrated/index" target="_blank" rel="noreferrer">
+          © 2023 StingersLab 粤ICP备1号
+        </a>
+      </FooterContainer>
     </div>
   );
 };

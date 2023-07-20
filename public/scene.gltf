@@ -1,0 +1,240 @@
+{
+  "accessors": [
+    {
+      "bufferView": 1,
+      "componentType": 5126,
+      "count": 50673,
+      "max": [
+        19.089160919189453,
+        69.7170181274414,
+        19.24184799194336
+      ],
+      "min": [
+        -22.41209602355957,
+        -0.01260780356824398,
+        -33.71605682373047
+      ],
+      "type": "VEC3"
+    },
+    {
+      "bufferView": 1,
+      "byteOffset": 608076,
+      "componentType": 5126,
+      "count": 50673,
+      "max": [
+        0.9999940395355225,
+        0.9998728036880493,
+        0.9999887347221375
+      ],
+      "min": [
+        -0.9998500943183899,
+        -1.0,
+        -0.9999561905860901
+      ],
+      "type": "VEC3"
+    },
+    {
+      "bufferView": 0,
+      "componentType": 5125,
+      "count": 303996,
+      "type": "SCALAR"
+    }
+  ],
+  "asset": {
+    "extras": {
+      "author": "motorbottt (https://sketchfab.com/motorbottt)",
+      "license": "CC-BY-4.0 (http://creativecommons.org/licenses/by/4.0/)",
+      "source": "https://sketchfab.com/3d-models/gt-buzz-3d-5d892c7531604658a076b0125f1d7e8b",
+      "title": "GT Buzz 3D"
+    },
+    "generator": "Sketchfab-15.30.0",
+    "version": "2.0"
+  },
+  "bufferViews": [
+    {
+      "buffer": 0,
+      "byteLength": 1215984,
+      "name": "floatBufferViews",
+      "target": 34963
+    },
+    {
+      "buffer": 0,
+      "byteLength": 1216152,
+      "byteOffset": 1215984,
+      "byteStride": 12,
+      "name": "floatBufferViews",
+      "target": 34962
+    }
+  ],
+  "buffers": [
+    {
+      "byteLength": 2432136,
+      "uri": "scene.bin"
+    }
+  ],
+  "materials": [
+    {
+      "doubleSided": true,
+      "name": "Titanium_Polished_1",
+      "pbrMetallicRoughness": {
+        "baseColorFactor": [
+          0.792157,
+          0.819608,
+          0.933333,
+          1.0
+        ],
+        "metallicFactor": 0.0,
+        "roughnessFactor": 0.9577051494623774
+      }
+    }
+  ],
+  "meshes": [
+    {
+      "name": "C:/Users/Ccrrq/Downloads/GA_Tech_Mascot.obj_Titanium Polished #1_0",
+      "primitives": [
+        {
+          "attributes": {
+            "NORMAL": 1,
+            "POSITION": 0
+          },
+          "indices": 2,
+          "material": 0,
+          "mode": 4
+        }
+      ]
+    }
+  ],
+  "nodes": [
+    {
+      "children": [
+        1
+      ],
+      "matrix": [
+        1.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        2.220446049250313e-16,
+        -1.0,
+        0.0,
+        0.0,
+        1.0,
+        2.220446049250313e-16,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        1.0
+      ],
+      "name": "Sketchfab_model"
+    },
+    {
+      "children": [
+        2
+      ],
+      "matrix": [
+        0.0010000000474974513,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0010000000474974513,
+        0.0,
+        0.0,
+        -0.0010000000474974513,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        1.0
+      ],
+      "name": "6bf4e7c0d3664423aad5992f49228a9f.fbx"
+    },
+    {
+      "children": [
+        3,
+        5
+      ],
+      "name": "RootNode"
+    },
+    {
+      "children": [
+        4
+      ],
+      "matrix": [
+        0.6531521683856294,
+        -0.08841741838077641,
+        -0.7520469433885288,
+        0.0,
+        0.057977228907392125,
+        0.9960835106188877,
+        -0.0667553803177858,
+        0.0,
+        0.7550038979113751,
+        -1.7637997214853263e-07,
+        0.6557203017587595,
+        0.0,
+        -81.19945526123047,
+        41.46237564086914,
+        108.26097106933594,
+        1.0
+      ],
+      "name": "Active Camera"
+    },
+    {
+      "name": "Object_4"
+    },
+    {
+      "children": [
+        6
+      ],
+      "name": "Default"
+    },
+    {
+      "children": [
+        7
+      ],
+      "matrix": [
+        1.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        1.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        1.0,
+        0.0,
+        1.6614675521850586,
+        0.01260780356824398,
+        7.237104415893555,
+        1.0
+      ],
+      "name": "GA_Tech_Mascot"
+    },
+    {
+      "children": [
+        8
+      ],
+      "name": "C:/Users/Ccrrq/Downloads/GA_Tech_Mascot.obj"
+    },
+    {
+      "mesh": 0,
+      "name": "C:/Users/Ccrrq/Downloads/GA_Tech_Mascot.obj_Titanium Polished #1_0"
+    }
+  ],
+  "scene": 0,
+  "scenes": [
+    {
+      "name": "Sketchfab_Scene",
+      "nodes": [
+        0
+      ]
+    }
+  ]
+}

@@ -1,8 +1,5 @@
 import React from "react";
 import styled from "styled-components";
-import documentation from "../../constant/documentation";
-import images from "../../constant/images";
-import prj1 from "../../assets/videos/prj1.mp4";
 const ProjectContainer = styled.div`
   display: flex;
   flex-direction: column;
@@ -53,12 +50,21 @@ const Photos = styled.div`
   display: flex;
   flex-direction: row;
   justify-content: space-between;
-  @media screen and (max-width: 768px) {
+  @media screen and (max-width: 1400px) {
+    align-items: center;
     flex-direction: column;
     gap: 20px;
   }
 `;
-const Photo = styled.img``;
+const Photo = styled.img`
+  width: 30%;
+  height: auto;
+  @media screen and (max-width: 1400px) {
+    width: 50%;
+  }
+  /* cover */
+  object-fit: cover;
+`;
 const Video = styled.video`
   width: 100%;
   height: auto;
@@ -72,12 +78,16 @@ const ProjectAlex = () => {
       <Maker>
         <b>Maker: &nbsp;</b>Alexander Buddenbaum
       </Maker>
-      <Documentation>
+      {/* <Documentation>
         <b>Documentation: &nbsp;</b>
-        <a href={documentation.alex} download>
+        <a
+          href="https://stingerslab.s3.cn-north-1.amazonaws.com.cn/pdfs/p_pdf_1_1.pdf"
+          target="_blank"
+          rel="noreferrer"
+        >
           Click here to download
         </a>
-      </Documentation>
+      </Documentation> */}
       <DescriptionContainer>
         <DescriptionTitle>
           <b>Description: &nbsp;</b>
@@ -95,11 +105,16 @@ const ProjectAlex = () => {
       </DescriptionContainer>
       <PhotosContainer>
         <b>Photos & Vedios:</b>
-        <Video src={prj1} type="video/mp4" controls loop />
+        <Video
+          src="https://stingerslab.s3.cn-north-1.amazonaws.com.cn/videos/prj1_1.mp4"
+          type="video/mp4"
+          controls
+          loop
+        />
         <Photos>
-          <Photo src={images.prj1_1} />
-          <Photo src={images.prj1_2} />
-          <Photo src={images.prj1_3} />
+          <Photo src='https://stingerslab.s3.cn-north-1.amazonaws.com.cn/images/prj1_1.jpg' />
+          <Photo src='https://stingerslab.s3.cn-north-1.amazonaws.com.cn/images/prj1_2.jpg' />
+          <Photo src='https://stingerslab.s3.cn-north-1.amazonaws.com.cn/images/prj1_3.jpg' />
         </Photos>
       </PhotosContainer>
     </ProjectContainer>

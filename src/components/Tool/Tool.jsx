@@ -1,7 +1,6 @@
 import React, { useState } from "react";
 import { Link } from "react-router-dom";
 import styled from "styled-components";
-import images from "../../constant/images";
 const ToolContainer = styled.div`
   display: flex;
   flex-direction: column;
@@ -78,8 +77,8 @@ const Title = styled.h1`
   }
 `;
 const Tool = (props) => {
-    console.log(props)
   const [hover, setHover] = useState(false);
+  
   return (
     <Link
       className="card"

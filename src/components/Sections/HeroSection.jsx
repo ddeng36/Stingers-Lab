@@ -1,6 +1,5 @@
-import React from "react";
+import React, { useState } from "react";
 import styled from "styled-components";
-import heroVideo from "../../assets/videos/heroVideo.mp4";
 const Section = styled.section`
   width: 100vw;
   height: 100vh;
@@ -62,10 +61,20 @@ const VideoContainer = styled.div`
 `;
 
 const HeroSection = () => {
+  // make it play automatically in wechat browser for ios
+  document.addEventListener('WeixinJSBridgeReady', function () {
+    document.getElementById('hero').play();
+  }, false);
+  // if it is not Andriod, render the video
+  const isAndriod = navigator.userAgent.indexOf('Android') > -1 || navigator.userAgent.indexOf('Adr') > -1;
+
   return (
     <Section>
       <VideoContainer>
-        <video src={heroVideo} type="video/mp4" autoPlay muted loop />
+        {
+          !isAndriod  && <video id="hero"src='/heroVideo.mp4' type="video/mp4" autoPlay muted loop  
+          playsInline webkit-playsinline="true" x5-video-player-type="h5" x5-video-player-fullscreen="true" /> 
+        }
       </VideoContainer>
       <TextContainer>
         <span>Maker</span>

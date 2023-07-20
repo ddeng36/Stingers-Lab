@@ -1,7 +1,6 @@
 import React from "react";
 import styled from "styled-components";
 import StyledInfo from "../../components/StyledInfo/StyledInfo";
-import images from "../../constant/images";
 import Footer from "../../components/Footer/Footer";
 import Navbar from "../../components/Navbar/Navbar";
 import Tool from "../../components/Tool/Tool";
@@ -26,7 +25,6 @@ const CardContainer = styled.div`
 const Tools = () => {
   // log each Tool component's mouse position
   React.useEffect(() => {
-    const container = document.querySelector(".container");
     const cards = document.querySelectorAll(".card");
     const handleMouseMove = (e) => {
       cards.forEach((card) => {
@@ -43,10 +41,6 @@ const Tools = () => {
     return () => {
       document.removeEventListener("mousemove", handleMouseMove);
     };
-    container.addEventListener("mousemove", handleMouseMove);
-    return () => {
-      container.removeEventListener("mousemove", handleMouseMove);
-    }
 
   }, []);
   
@@ -55,7 +49,7 @@ const Tools = () => {
     <Navbar alwayson={false} active="Tools" />
       <ToolsContainer>
         <StyledInfo
-          bg={images.tools}
+          bg='https://stingerslab.s3.cn-north-1.amazonaws.com.cn/images/tools.jpg'
           title="Tools"
           content="AVAILABLE TOOLS FOR YOU"
         />

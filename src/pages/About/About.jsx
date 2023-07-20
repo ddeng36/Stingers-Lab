@@ -2,7 +2,6 @@ import React from "react";
 import Navbar from "../../components/Navbar/Navbar";
 import styled from "styled-components";
 import StyledInfo from "../../components/StyledInfo/StyledInfo";
-import images from "../../constant/images";
 import { Amap, Marker } from "@amap/amap-react";
 import Footer from "../../components/Footer/Footer";
 const AboutContainer = styled.div`
@@ -34,6 +33,13 @@ const ContactContent = styled.p`
   color: var(--grey);
 `;
 
+const Img = styled.img`
+  width: 300px;
+  height: 300px;
+  margin-top: 20px;
+  margin-bottom: 50px;
+  object-fit: cover;
+`;
 const MapContainer = styled.div`
   width: 500px;
   height: 500px;
@@ -57,6 +63,7 @@ const PersonContainer = styled.div`
   gap: 10px;
 `;
 const StudentContainer = styled.div`
+  width: 80%;
   display: flex;
   flex-direction: row;
   justify-content: space-around;
@@ -79,7 +86,9 @@ const PersonImg = styled.img`
   height: 600px;
   object-fit: cover;
 `;
-const PersonName = styled.h1``;
+const PersonSkills = styled.p`
+  font-size: var(--fontmd);
+`;
 const PersonEmail = styled.p`
   color: var(--grey);
   font-size: var(--fontmd);
@@ -92,7 +101,7 @@ const About = () => {
       <AboutContainer>
         <ContactWrapper>
           <StyledInfo
-            bg={images.about}
+            bg={"https://stingerslab.s3.cn-north-1.amazonaws.com.cn/images/about.png"}
             title="Contact Us"
             content="FIND US HERE"
           />
@@ -123,44 +132,71 @@ const About = () => {
               />
             </Amap>
           </MapContainer>
+          <ContactContainer>
+            <ContactTitle>WECHAT:</ContactTitle>
+            <Img src='https://stingerslab.s3.cn-north-1.amazonaws.com.cn/images/wechat.jpg' />
+          </ContactContainer>
         </ContactWrapper>
         <TeamContainer>
           <StyledInfo
-            bg={images.team}
+            bg='https://stingerslab.s3.cn-north-1.amazonaws.com.cn/images/team.jpg'
             title="Our Team"
-            content="THE BEST AND BRIGHTEST"
+            content="LAB OPERATION & TECHNICAL SUPPORT"
           />
+
+          <StudentContainer>
           <PersonContainer>
-            <PersonTitle>Makerspace Manager</PersonTitle>
+            <PersonTitle>Fandi Peng</PersonTitle>
             <PersonContent>
-              <PersonImg src={images.fandi} />
-              <PersonName>Fandi Peng</PersonName>
+              <PersonImg src='https://stingerslab.s3.cn-north-1.amazonaws.com.cn/images/fandi.jpg' />
+              
               <PersonEmail>fandi@gatech.edu</PersonEmail>
+              <PersonSkills>IoT</PersonSkills>
             </PersonContent>
           </PersonContainer>
-          <StudentContainer>
             <PersonContainer>
-            <PersonTitle>Student Assistant</PersonTitle>
+
+            <PersonTitle>Zhikang Wang</PersonTitle>
             <PersonContent>
-              <PersonImg src={images.kk} />
-              <PersonName>Zhikang Wang</PersonName>
+              <PersonImg src='https://stingerslab.s3.cn-north-1.amazonaws.com.cn/images/kk.png' />
               <PersonEmail>zwang3396@gatech.edu</PersonEmail>
+              <PersonSkills>Mechanical Design</PersonSkills>
             </PersonContent>
             </PersonContainer>
             <PersonContainer>
-            <PersonTitle>Student Assistant</PersonTitle>
+            <PersonTitle>Xiao Lin</PersonTitle>
             <PersonContent>
-              <PersonImg src={images.lx} />
-              <PersonName>Xiao Lin</PersonName>
+              <PersonImg src='https://stingerslab.s3.cn-north-1.amazonaws.com.cn/images/lx.png' />
               <PersonEmail>xlin350@gatech.edu</PersonEmail>
+
+              <PersonSkills>Hardware & Embedded</PersonSkills>
+            </PersonContent>
+            </PersonContainer>
+
+            <PersonContainer>
+            <PersonTitle>Runqing Chen</PersonTitle>
+            <PersonContent>
+              <PersonImg src='https://stingerslab.s3.cn-north-1.amazonaws.com.cn/images/mt.jpg' />
+              <PersonEmail>rcheng77@gatech.edu</PersonEmail>
+              <PersonSkills>Industrial Design & 3D Modeling</PersonSkills>
+            </PersonContent>
+            </PersonContainer>
+
+            <PersonContainer>
+            <PersonTitle>Mingxuan Xie</PersonTitle>
+            <PersonContent>
+              <PersonImg src='https://stingerslab.s3.cn-north-1.amazonaws.com.cn/images/xmx.jpg' />
+              <PersonEmail>mxie76@gatech.edu</PersonEmail>
+              <PersonSkills>Hardware & Power Electronics</PersonSkills>
             </PersonContent>
             </PersonContainer>
             <PersonContainer>
-            <PersonTitle>Student Assistant</PersonTitle>
+            
+            <PersonTitle>Dingchao Deng</PersonTitle>
             <PersonContent>
-              <PersonImg src={images.dd} />
-              <PersonName>Dingchao Deng</PersonName>
-              <PersonEmail>dingchaodeng@gatech.edu</PersonEmail>
+              <PersonImg src='https://stingerslab.s3.cn-north-1.amazonaws.com.cn/images/dd.jpg' />
+              <PersonEmail>ddeng36@gatech.edu</PersonEmail>
+              <PersonSkills>Software</PersonSkills>
             </PersonContent>
             </PersonContainer>
           </StudentContainer>
