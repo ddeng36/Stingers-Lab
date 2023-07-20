@@ -28,11 +28,11 @@ const Title = styled.h1`
   margin-bottom: 20px;
 `;
 const Maker = styled.div``;
-const Documentation = styled.div`
-  a {
-    color: var(--grey);
-  }
-`;
+// const Documentation = styled.div`
+//   a {
+//     color: var(--grey);
+//   }
+// `;
 const DescriptionContainer = styled.div`
   display: flex;
   flex-direction: column;

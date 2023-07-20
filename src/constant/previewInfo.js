@@ -1,6 +1,4 @@
-
-
-export default [
+const previewInfo = [
   {
     id: 1,
     title: "FDM 3D Printer",
@@ -39,3 +37,6 @@ export default [
     image2: 'https://stingerslab.s3.cn-north-1.amazonaws.com.cn/images/t_6_2.jpg',
   },
 ];
+
+
+export default  previewInfo;

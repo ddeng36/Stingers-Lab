@@ -1,4 +1,4 @@
-import React, { useRef, useLayoutEffect, useState } from "react";
+import React, { useRef, useLayoutEffect } from "react";
 import styled from "styled-components";
 import gsap from "gsap";
 import { Link } from "react-router-dom";

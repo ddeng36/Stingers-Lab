@@ -116,7 +116,7 @@ const Navbar = (props) => {
         window.removeEventListener("scroll", handleScroll);
       };
     }
-  }, []);
+  }, [props.alwayson]);
 
   return (
     <div>

@@ -1,4 +1,4 @@
-export default [
+const detailedInfo = [
   {
     id: 1,
     title: "FDM 3D Printer",
@@ -96,3 +96,5 @@ export default [
     ]
   }
 ];
+
+export default detailedInfo;
