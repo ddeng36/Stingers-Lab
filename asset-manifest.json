@@ -1,0 +1,16 @@
+{
+  "files": {
+    "main.css": "/Stingers-Lab/static/css/main.073c9b0a.css",
+    "main.js": "/Stingers-Lab/static/js/main.35951627.js",
+    "static/js/787.486d89af.chunk.js": "/Stingers-Lab/static/js/787.486d89af.chunk.js",
+    "static/media/logo.svg": "/Stingers-Lab/static/media/logo.6ce24c58023cc2f8fd88fe9d219db6c6.svg",
+    "index.html": "/Stingers-Lab/index.html",
+    "main.073c9b0a.css.map": "/Stingers-Lab/static/css/main.073c9b0a.css.map",
+    "main.35951627.js.map": "/Stingers-Lab/static/js/main.35951627.js.map",
+    "787.486d89af.chunk.js.map": "/Stingers-Lab/static/js/787.486d89af.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.073c9b0a.css",
+    "static/js/main.35951627.js"
+  ]
+}
