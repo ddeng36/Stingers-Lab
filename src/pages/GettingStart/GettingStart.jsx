@@ -40,15 +40,14 @@ const PolicyContainer = styled.div`
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    
   }
   justify-content: space-between;
   align-items: center;
   margin-bottom: 50px;
 `;
 const PolicyTitle = styled.h3`
-text-align: center;
-  width: 35%;  
+  text-align: center;
+  width: 35%;
   @media screen and (max-width: 888px) {
     width: 100%;
   }
@@ -64,7 +63,7 @@ const PolicyContentContainer = styled.ul`
   list-style-type: none;
 `;
 const PolicyContent = styled.li`
-margin-bottom: 10px;
+  margin-bottom: 10px;
   &::before {
     content: "•";
     color: rgb(179, 163, 105);
@@ -77,10 +76,10 @@ margin-bottom: 10px;
 const GettingStart = () => {
   return (
     <div>
-      <Navbar alwayson={false} active="Start"/>
+      <Navbar alwayson={false} active="Start" />
       <GettingStartContainer>
         <StyledInfo
-          bg='https://stingerslab.s3.cn-north-1.amazonaws.com.cn/images/getting_started.jpg'
+          bg="https://stingerslab.s3.cn-north-1.amazonaws.com.cn/images/getting_started.jpg"
           title="Start Making"
           content="BEGIN HERE"
         />
@@ -90,7 +89,7 @@ const GettingStart = () => {
             <Answer>
               Any active student, faculty, or staff of Georgia Tech can join the
               Makerspace. All users must agree to the {""}
-              <u>Makerspace User Agreement</u> and complete the{" "} 
+              <u>Makerspace User Agreement</u> and complete the{" "}
               <u>Safety Training</u> before using the space.
             </Answer>
           </FAQ>
@@ -108,10 +107,6 @@ const GettingStart = () => {
               provide machine trainings and organize resources. We will also add
               your class time to our calendar to notify other users. This
               ensures that the Makerspace remains accessible to everyone.
-              Classes that utilize the Makerspace without proper notification
-              will be asked to leave until they submit a request through the
-              appropriate channels, allowing us to assess how the Makerspace can
-              best fulfill their needs.
             </Answer>
           </FAQ>
           <FAQ>
@@ -122,13 +117,12 @@ const GettingStart = () => {
               You can come to the space during open hours (Monday - Friday, 9AM
               - 5 PM) and ask a staff member to help you get started. If you
               want to come outside of these hours, you can request access by
-              sending a message to the StingersLab Wechat Group.
+              sending a email to the staff member.
             </Answer>
-            <Img src='https://stingerslab.s3.cn-north-1.amazonaws.com.cn/images/wechat.jpg' alt="wechat" />
           </FAQ>
         </FAQContainer>
         <StyledInfo
-          bg='https://stingerslab.s3.cn-north-1.amazonaws.com.cn/images/policy.jpg'
+          bg="https://stingerslab.s3.cn-north-1.amazonaws.com.cn/images/policy.jpg"
           title="Policies"
           content="Know and follow these rules:"
         />
@@ -159,9 +153,9 @@ const GettingStart = () => {
               demonstrates consideration for others and enhances safety.
             </PolicyContent>
             <PolicyContent>
-              Enter the space only when a student assistant or the lab manager is
-              present. Please adhere to the specified opening and closing times
-              as indicated on the calendar.
+              Enter the space only when a student assistant or the lab manager
+              is present. Please adhere to the specified opening and closing
+              times as indicated on the calendar.
             </PolicyContent>
             <PolicyContent>
               Do not bypass or violate any space policy or safety procedure.
@@ -173,7 +167,8 @@ const GettingStart = () => {
           <PolicyTitle>RESPECT YOUR COLLEAGUES</PolicyTitle>
           <PolicyContentContainer>
             <PolicyContent>
-              Show consideration for other users and student assistants in the space.
+              Show consideration for other users and student assistants in the
+              space.
             </PolicyContent>
             <PolicyContent>
               Share the available tools and resources cooperatively.

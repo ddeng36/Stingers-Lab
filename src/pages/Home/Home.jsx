@@ -99,7 +99,7 @@ const Home = () => {
   useEffect(() => {
     const req = async () => {
       for (let i = 0; i <= 100; i++) {
-        await new Promise((resolve) => setTimeout(resolve, 30));
+        await new Promise((resolve) => setTimeout(resolve, 1));
         setNum(i);
         if (i === 100) {
           setLoading(false);
@@ -119,7 +119,7 @@ const Home = () => {
         <Tip>Scroll to see more</Tip>
       </SliderContainer>
       <Container loading={loading.toString()}>
-        <Model1/>
+        <Model1 />
         <Navbar alwayson={true} active="Home" />
         <HeroSection />
         <MottoSection />

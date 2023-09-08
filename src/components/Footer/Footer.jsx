@@ -22,7 +22,7 @@ const Footer = () => {
     <div>
       <FooterContainer>
         <a href="https://beian.miit.gov.cn/#/Integrated/index" target="_blank" rel="noreferrer">
-          © 2023 StingersLab 粤ICP备1号
+          © 2023 StingersLab 粤ICP备2023086959号
         </a>
       </FooterContainer>
     </div>

@@ -7,15 +7,14 @@ const StyledInfoContainer = styled.div`
   justify-content: center;
   align-items: center;
   width: 100vw;
-  height: 60vh;
-  margin-bottom: 100px;
+  height: 50vh;
+  margin-bottom: 50px;
   background-image: url(${(props) => props.img});
   background-size: cover;
   background-position: center;
   background-attachment: fixed;
   @media screen and (max-width: 700px) {
-
-  background-attachment: scroll;
+    background-attachment: scroll;
   }
   overflow: hidden;
 

@@ -112,7 +112,7 @@ const MottoSection = () => {
       </TextContainer>
 
       <TextContainer2 ref={text2}>
-        <span>Creating the Next.</span>
+        <span>Creating the Future.</span>
       </TextContainer2>
     </Section>
   );

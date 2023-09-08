@@ -132,10 +132,10 @@ const About = () => {
               />
             </Amap>
           </MapContainer>
-          <ContactContainer>
+          {/* <ContactContainer>
             <ContactTitle>WECHAT:</ContactTitle>
             <Img src='https://stingerslab.s3.cn-north-1.amazonaws.com.cn/images/wechat.jpg' />
-          </ContactContainer>
+          </ContactContainer> */}
         </ContactWrapper>
         <TeamContainer>
           <StyledInfo

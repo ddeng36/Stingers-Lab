@@ -161,7 +161,7 @@ const DisplaySection = () => {
       <TextBlockLeft ref={container}>
         <Title>Hub for making things.</Title>
         <Text>
-         Currently, there are various projects going on in the lab, covering technical domains, including 3D modelling & printing, mechanical & industrial design, loT, Al, and app development.
+         Currently, there are various projects going on in the lab, covering technical domains, including 3D modelling & printing, mechanical & industrial design, loT and app development.
         </Text>
       </TextBlockLeft>
 

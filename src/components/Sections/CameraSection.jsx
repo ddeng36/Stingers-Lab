@@ -71,7 +71,6 @@ const TitleContainer = styled.div`
 const Title = styled.h1`
   font-size: var(--fontBig);
   z-index: 5;
-  text-transform: capitalize;
   @media screen and (max-width: 70em) {
     font-size: var(--fontxxxl);
   }
@@ -216,9 +215,9 @@ const CameraSection = () => {
         </>
       )}
       <TitleContainer ref={titleRef}>
-        <Title>Creating</Title>
-        <Title>the</Title>
-        <Title>Next.</Title>
+        <Title>Join</Title>
+        <Title>us</Title>
+        <Title>NOW!</Title>
       </TitleContainer>
       <Explore>
         <span></span>

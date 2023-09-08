@@ -9,7 +9,6 @@ const Section = styled.section`
   overflow: hidden;
 `;
 
-
 const TextContainer = styled.div`
   z-index: 1;
   width: 100%;
@@ -18,7 +17,7 @@ const TextContainer = styled.div`
   display: flex;
   justify-content: space-between;
   align-items: center;
-  
+
   span {
     font-size: var(--fontxxxl);
     text-transform: uppercase;
@@ -62,23 +61,39 @@ const VideoContainer = styled.div`
 
 const HeroSection = () => {
   // make it play automatically in wechat browser for ios
-  document.addEventListener('WeixinJSBridgeReady', function () {
-    document.getElementById('hero').play();
-  }, false);
+  document.addEventListener(
+    "WeixinJSBridgeReady",
+    function () {
+      document.getElementById("hero").play();
+    },
+    false
+  );
   // if it is not Andriod, render the video
-  const isAndriod = navigator.userAgent.indexOf('Android') > -1 || navigator.userAgent.indexOf('Adr') > -1;
+  const isAndriod =
+    navigator.userAgent.indexOf("Android") > -1 ||
+    navigator.userAgent.indexOf("Adr") > -1;
 
   return (
     <Section>
       <VideoContainer>
-        {
-          !isAndriod  && <video id="hero"src='/heroVideo.mp4' type="video/mp4" autoPlay muted loop  
-          playsInline webkit-playsinline="true" x5-video-player-type="h5" x5-video-player-fullscreen="true" /> 
-        }
+        {!isAndriod && (
+          <video
+            id="hero"
+            src="/heroVideo.mp4"
+            type="video/mp4"
+            autoPlay
+            muted
+            loop
+            playsInline
+            webkit-playsinline="true"
+            x5-video-player-type="h5"
+            x5-video-player-fullscreen="true"
+          />
+        )}
       </VideoContainer>
       <TextContainer>
-        <span>Maker</span>
-        <span>Space</span>
+        <span>&nbsp;Maker</span>
+        <span>Venture</span>
       </TextContainer>
     </Section>
   );

@@ -134,8 +134,8 @@ const Navbar = (props) => {
           }}
         >
           <TitleContainer>
-            <Title>StingersLab</Title>
-            <Title>@ GEORGIA TECH - SHENZHEN</Title>
+            <Title>Stingers Lab</Title>
+            <Title>@ GEORGIA TECH-SHENZHEN</Title>
           </TitleContainer>
         </Link>
         <ListContainer visible={listVisible.toString()}>
